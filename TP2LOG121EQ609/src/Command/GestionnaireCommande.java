@@ -1,4 +1,10 @@
 package Command;
 
-public class GestionnaireCommande {
+public class GestionnaireCommande implements Command{
+
+
+    @Override
+    public void performCommand() {
+
+    }
 }
