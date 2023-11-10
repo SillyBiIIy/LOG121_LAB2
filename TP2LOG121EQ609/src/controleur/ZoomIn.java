@@ -1,9 +1,30 @@
 package controleur;
 
-public class ZoomIn implements Zoom{
+import Command.Command;
+import modele.Perspective;
 
-    @Override
-    public void execute(){
-        //zoom in function
+import java.awt.*;
+
+public class ZoomIn implements Command {
+
+    private double scale;
+    private final double ZOOM_FACTOR = 1.1; // Adjust this value for zoom sensitivity
+    private int notches;
+
+    public void setNotches(int notches) {
+        this.notches = notches;
     }
+
+    private void zoomCommand(){
+
+            scale *= ZOOM_FACTOR;
+            //set scale of image
+
+    }
+    @Override
+    public void performCommand(Perspective image) {
+        zoomCommand();
+    }
+
+
 }
